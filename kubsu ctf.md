@@ -76,3 +76,18 @@ KubSTU{wh1t3_sp4c3}
 ```
 
 Classic whitespace steganography 👍
+
+
+
+
+### stego 
+
+use aperisolve 
+
+![alt text](image.png)
+
+
+use https://www.dcode.fr/rot-13-cipher
+
+
+
