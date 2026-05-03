@@ -1,0 +1,93 @@
+
+
+
+just use this python code to decode
+with open("message.txt", "r", encoding="utf-8") as f:
+    lines = f.readlines()
+
+binary = ""
+
+for line in lines:
+    stripped = line.rstrip("\n")
+    
+    # Extract trailing spaces/tabs manually
+    trail = ""
+    for ch in reversed(stripped):
+        if ch in [" ", "\t"]:
+            trail = ch + trail
+        else:
+            break
+
+    for ch in trail:
+        if ch == " ":
+            binary += "0"
+        elif ch == "\t":
+            binary += "1"
+
+print("Binary:", binary)
+
+
+
+
+
+
+
+
+
+
+
+
+Nice — you already extracted the binary correctly. Now just decode it.
+
+The binary you got:
+
+```
+01001011011101010110001001010011010101000101010101111011011101110110100000110001011101000011001101011111011100110111000000110100011000110011001101111101
+```
+
+Split into 8-bit chunks:
+
+```
+01001011 → K
+01110101 → u
+01100010 → b
+01010011 → S
+01010100 → T
+01010101 → U
+01111011 → {
+01110111 → w
+01101000 → h
+00110001 → 1
+01110100 → t
+00110011 → 3
+01011111 → _
+01110011 → s
+01110000 → p
+00110100 → 4
+01100011 → c
+00110011 → 3
+01111101 → }
+```
+
+### Final flag:
+
+```
+KubSTU{wh1t3_sp4c3}
+```
+
+Classic whitespace steganography 👍
+
+
+
+
+### stego 
+
+use aperisolve 
+
+![alt text](image.png)
+
+
+use https://www.dcode.fr/rot-13-cipher
+
+
+
