@@ -10,7 +10,8 @@
 <body>
     <h2>Welcome back, User!</h2>
     <p>Manage your account settings below.</p>
-    <!-- This is the high-value target button the attacker wants the user to click -->
-    <button class="btn-danger" onclick="alert('CRITICAL ACTION TRIGGERED: Account Permanently Deleted!')">Delete My Account</button>
+    
+    <!-- Single high-value target button that executes the action and drops the flag -->
+    <button class="btn-danger" onclick="alert('CRITICAL ACTION TRIGGERED! Account Permanently Deleted!\n\nHere is your flag: FLAG{m4st3r_0f_1fr4m3_4l1gnm3nt}')">Delete My Account</button>
 </body>
 </html>
